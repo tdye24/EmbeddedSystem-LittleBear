@@ -106,13 +106,6 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1) {
-		Beep_Switch(1);
-		HAL_Delay(1000);
-		Beep_Switch(0);
-		HAL_Delay(1000);
-		
-		
-		
     HAL_Delay(500);
     for(i = 0,ad1 = 0, ad2 = 0; i<100;) {
         ad1 += ADC_Value[i++];
@@ -129,6 +122,10 @@ int main(void)
     HAL_Delay(1000);
 	/* USER CODE END WHILE */
 	/* USER CODE BEGIN 3 */
+		Beep_Switch(1);
+		HAL_Delay(1000);
+		Beep_Switch(0);
+		HAL_Delay(1000);
 	}
 	/* USER CODE END 3 */
 }
