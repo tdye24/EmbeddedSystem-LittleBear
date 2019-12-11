@@ -1,0 +1,25 @@
+
+.logo-content {
+	text-align: center;
+	margin-top: 200rpx;
+	margin-bottom: 100rpx;
+}
+.logo {
+	height: 120rpx;
+	width: 120rpx;
+}
+.line {
+	width: 90%;
+	height: 1px;
+	margin-left: 30rpx;
+	margin-right: 30rpx;
+	background-color: #cccccc;
+	margin-top: 1px;
+}
+.inputText {
+	margin-left: 30rpx;
+}
+.jsonText{
+	word-wrap:break-word;
+}
+

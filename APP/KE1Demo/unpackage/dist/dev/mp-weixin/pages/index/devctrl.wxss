@@ -1,0 +1,30 @@
+
+.logo-content {
+	text-align: center;
+	margin-top: 200rpx;
+	margin-bottom: 100rpx;
+}
+.logo {
+	height: 120rpx;
+	width: 120rpx;
+}
+.line {
+	width: 90%;
+	height: 1px;
+	margin-left: 30rpx;
+	margin-right: 30rpx;
+	background-color: #cccccc;
+	margin-top: 1px;
+}
+.inputText {
+	margin-left: 30rpx;
+}
+.button {
+	margin-top: 30rpx;
+    margin-left: 0;
+    margin-right: 0;
+	background: #8A6DE9;
+	color: #000000;
+}
+
+
