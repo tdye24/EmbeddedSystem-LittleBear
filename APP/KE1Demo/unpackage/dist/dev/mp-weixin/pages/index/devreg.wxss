@@ -30,4 +30,11 @@
 	background: #8A6DE9;
 	color: #000000;
 }
+.textbox{
+	background: #66AAFF;
+	padding: 10px;
+	height: 80px;
+	margin: 9px;
+	border-radius: 10px;
+}
 

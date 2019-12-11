@@ -2,28 +2,36 @@
 	<view class="devinfo">
 		<view class="topbox">
 			<view>
-				<view>设备号:{{devid}}</view>
+				<view>设备号:</view>
+				<view>{{devid}}</view>
 			</view>
 		</view>
 		<view class="topbox2">
 			<view>
-				<view class="topbox_text">光强:{{illumination}}</view>
+				<view >光强:</view>
+				<view >{{illumination}}</view>
 			</view>
 		</view>
 		<view class="topbox">
-				<view>
-					<view class="topbox_text">噪音:{{sound}}</view>
-				</view>
+			<view>
+				<view>噪音:</view>
+				<view>{{sound}}</view>
+			</view>
 		</view>
 		<view class="topbox2">
-				<view>
-					<view class="topbox_text">LED灯:{{LED}}</view>
-				</view>
+			<view>
+				<view>LED灯:</view>
+				<view>{{LED}}</view>
+			</view>
 		</view>
 		<view class="topbox">
-				<view>
-					<view class="topbox_text">信号强度:{{signal}}</view>
-				</view>
+			<view>
+				<view>信号强度:</view>
+				<view>{{signal}}</view>
+			</view>
+		</view>
+		<view class="uni-padding-wrap uni-common-mt">
+			<button class="button"   @tap="getInfo()">刷新数据</button>
 		</view>
 	</view>
 </template>
@@ -34,6 +42,8 @@
 		data() {
 			return {
 				devid:'477077ac-04d3-4574-aea5-b7ca98b1415e',
+				devinfo:null,
+				userinfo:null,
 				illumination:666,//光照
 				sound:233,//噪音
 				LED:true,
@@ -42,8 +52,8 @@
 				humidity:30,
 			}
 		},
-		onLoad:function(e) {
-
+		onLoad:function(e){
+			
 		},
 		methods: {
 			getInfo(){
@@ -52,7 +62,7 @@
 					mask: false
 				});
 				uni.request({
-					url: this.globalVal.default_url.show,
+					url: this.globalVal.default_url.devInfo,
 					method: 'POST',
 					data: {
 						deviceId:this.devid
@@ -97,22 +107,34 @@
 	
 	.topbox{
 		background: #8A6DE9;
-		padding: 20px;
+		padding: 15px;
 		height: 40px;
 		margin: 9px;
+		
+		border-radius: 15px;
 	}
 	
 	.topbox2{
-		background: #4CD964;
-		padding: 20px;
+		background: #66AAFF;
+		padding: 15px;
 		height: 40px;
 		margin: 9px;
+		border-radius: 15px;
 	}
 	.content{
 		height: calc(100% - 10px);
 	}
 	.uni-tab{
 		height: calc(100% - 210px); 
+	}
+	.button {
+		margin-top: 30upx;
+	    margin-left: 0;
+	    margin-right: 0;
+		margin-bottom: 10px;
+		background: #FFB400;
+		color: #000000;
+		
 	}
 	@import "./style/devinfo.css";
 	@media ( min-width : 750px) {

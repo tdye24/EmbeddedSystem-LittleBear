@@ -22,8 +22,8 @@
 }
 /*通用 */
 view{
-	font-size:28rpx;
-	line-height:1.8;
+	font-size:30rpx;
+	line-height:2.0;
 }
 progress, checkbox-group{
 	width: 100%;

@@ -12,11 +12,7 @@
 		<view class="line"></view>
 		<view class="uni-padding-wrap uni-common-mt">
 			<button class="button"   @tap="lightUp">亮灯30秒</button>
-		<view class="line"></view>
-		<view class="line"></view>
 			<button class="button"   @tap="lightsOff">灭灯</button>
-		<view class="line"></view>
-		<view class="line"></view>
 			<button class="button"  @tap="alarm">蜂鸣器响</button>
 		</view>
 	</view>

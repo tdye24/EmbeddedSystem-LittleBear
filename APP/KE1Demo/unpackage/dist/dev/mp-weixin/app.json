@@ -21,20 +21,20 @@
     "list": [
       {
         "pagePath": "pages/index/show/show",
-        "iconPath": "static/admin_off.png",
-        "selectedIconPath": "static/admin_on.png",
+        "iconPath": "static/show-off.png",
+        "selectedIconPath": "static/show-on.png",
         "text": "展示"
       },
       {
         "pagePath": "pages/index/devctrl",
-        "iconPath": "static/admin_off.png",
-        "selectedIconPath": "static/admin_on.png",
+        "iconPath": "static/cmd-off.png",
+        "selectedIconPath": "static/cmd-on.png",
         "text": "命令"
       },
       {
         "pagePath": "pages/index/devreg",
         "iconPath": "static/reg-off.png",
-        "selectedIconPath": "static/admin_on.png",
+        "selectedIconPath": "static/reg-on.png",
         "text": "注册"
       }
     ]

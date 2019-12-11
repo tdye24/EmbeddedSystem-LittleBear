@@ -15,9 +15,13 @@
 			<button class="button"  @tap="regDev">注册添加设备</button>
 		</view>
 		
-		<view class="devIdText">
-			设备ID号<br>
-			{{devid}}
+		<view class="textbox">
+			<view>
+				设备号:
+			</view>
+			<view>
+				{{devid}}
+			</view>
 		</view>
 		
 	</view>
@@ -28,7 +32,7 @@
 		data() {
 			return {
 				imei:null,
-				devid:null,
+				devid:'477077ac-04d3-4574-aea5-b7ca98b1415e',
 				btnAddDisable:true,
 				btnInfoDisable:true
 			}
@@ -161,5 +165,12 @@
 	    margin-right: 0;
 		background: #8A6DE9;
 		color: #000000;
+	}
+	.textbox{
+		background: #66AAFF;
+		padding: 10px;
+		height: 80px;
+		margin: 9px;
+		border-radius: 10px;
 	}
 </style>
