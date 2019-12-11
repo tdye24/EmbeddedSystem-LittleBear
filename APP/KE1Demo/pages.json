@@ -1,0 +1,66 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+		    "path" : "pages/index/show/show",
+		    "style" : {
+				"navigationBarTitleText": "终端数据"
+			}
+		},
+		{
+			"path": "pages/index/devreg",
+			"style": {
+				"navigationBarTitleText": "设备注册"
+			}
+		},
+		{
+			"path": "pages/index/devctrl",
+			"style": {
+				"navigationBarTitleText": "设备监控"
+			}
+		},
+		{
+			"path": "pages/index/devinfo",
+			"style": {
+				"navigationBarTitleText": "设备信息"
+			}
+		},
+		{
+			"path": "pages/index/devhistory",
+			"style": {
+				"navigationBarTitleText": "设备历史信息"
+			}
+		}
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "光感声控灯系统",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "#007AFF",
+		"borderStyle": "black",
+		"backgroundColor": "#F8F8F8",
+		"list": [
+			{
+				"pagePath": "pages/index/show/show",
+				"iconPath": "static/admin_off.png",
+				"selectedIconPath": "static/admin_on.png",
+				"text": "展示"
+			},
+			{
+				"pagePath": "pages/index/devctrl",
+				"iconPath": "static/admin_off.png",
+				"selectedIconPath": "static/admin_on.png",
+				"text": "命令"
+			},
+			{
+				"pagePath": "pages/index/devreg",
+				"iconPath": "static/reg-off.png",
+				"selectedIconPath": "static/admin_on.png",
+				"text": "注册"
+			}
+		]
+	}
+}

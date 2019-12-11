@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/index/show/show",
+    "pages/index/devreg",
+    "pages/index/devctrl",
+    "pages/index/devinfo",
+    "pages/index/devhistory"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "光感声控灯系统",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#007AFF",
+    "borderStyle": "black",
+    "backgroundColor": "#F8F8F8",
+    "list": [
+      {
+        "pagePath": "pages/index/show/show",
+        "iconPath": "static/admin_off.png",
+        "selectedIconPath": "static/admin_on.png",
+        "text": "展示"
+      },
+      {
+        "pagePath": "pages/index/devctrl",
+        "iconPath": "static/admin_off.png",
+        "selectedIconPath": "static/admin_on.png",
+        "text": "命令"
+      },
+      {
+        "pagePath": "pages/index/devreg",
+        "iconPath": "static/reg-off.png",
+        "selectedIconPath": "static/admin_on.png",
+        "text": "注册"
+      }
+    ]
+  },
+  "usingComponents": {}
+}
