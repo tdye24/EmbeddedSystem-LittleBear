@@ -1,7 +1,7 @@
 <template>
 	<view class="uni-common-mt">
 		<view class="logo-content">
-			<image class="logo" src="/static/scan_icon.png" @tap="scanDev"></image>
+			<image class="logo" src="/static/dev.png" @tap="scanDev"></image>
 		</view>
 		
 		<view class="uni-form-item uni-column">

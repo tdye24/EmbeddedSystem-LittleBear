@@ -142,6 +142,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 var _default = {
   data: function data() {
     return {
@@ -150,7 +152,8 @@ var _default = {
       cmdstr: '',
       cntDown: null,
       maxTime: 0,
-      btnAddDisable: true };
+      btnAddDisable: true,
+      lampstatus: 0 };
 
   },
   onLoad: function onLoad(e) {
@@ -167,9 +170,12 @@ var _default = {
       }
     },
     lightUp: function lightUp() {
+      this.lampstatus = 1;
+      console.log(this.lampstatus);
     },
     lightsOff: function lightsOff() {
-
+      this.lampstatus = 0;
+      console.log(this.lampstatus);
     },
     alarm: function alarm() {
 

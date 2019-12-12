@@ -31,7 +31,7 @@
 			</view>
 		</view>
 		<view class="uni-padding-wrap uni-common-mt">
-			<button class="button"   @tap="getInfo()">刷新数据</button>
+			<button class="button"   @tap="getInfo">刷新数据</button>
 		</view>
 	</view>
 </template>
