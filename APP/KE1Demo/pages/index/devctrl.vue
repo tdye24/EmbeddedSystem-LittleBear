@@ -1,7 +1,9 @@
 <template>
 	<view class="uni-common-mt">
 		<view class="logo-content">
-			<image class="logo" src="/static/dev.png"></image>
+			<view v-if="lampstatus===1"><image class="logo" src="/static/lamp-on.png"></image></view>
+			<view v-else><image class="logo" src="/static/lamp-off.png"></image></view>
+			
 		</view>
 		<view class="uni-form-item uni-column">
 			<view class="with-fun">
@@ -11,13 +13,9 @@
 		
 		<view class="line"></view>
 		<view class="uni-padding-wrap uni-common-mt">
-			<button class="button"   @tap="lightUp">亮灯30秒</button>
-		<view class="line"></view>
-		<view class="line"></view>
+			<button class="button"   @tap="lightUp">亮灯</button>
 			<button class="button"   @tap="lightsOff">灭灯</button>
-		<view class="line"></view>
-		<view class="line"></view>
-			<button class="button"  @tap="alarm">蜂鸣器响</button>
+			<button class="button"  @tap="alarm">蜂鸣</button>
 		</view>
 	</view>
 </template>
@@ -30,10 +28,11 @@
 				cmdstr:'',
 				cntDown:null,
 				maxTime:0,
-				btnAddDisable:true
+				btnAddDisable:true,
+				lampstatus:0,
 			}
 		},
-		onLoad:function(e){
+		onLoad:function (e) {
 			
 		},
 		methods:{
@@ -47,9 +46,12 @@
 				}
 			},
 			lightUp(){
+				this.lampstatus=1;
+				console.log(this.lampstatus);
 			},
 			lightsOff(){
-				
+				this.lampstatus=0;
+				console.log(this.lampstatus);
 			},
 			alarm(){
 				
