@@ -7501,9 +7501,9 @@ module.exports = g;
 
 /***/ }),
 /* 4 */
-/*!********************************************************************!*\
-  !*** D:/U盘备份/APP/EmbeddedSystem-LittleBear/APP/KE1Demo/pages.json ***!
-  \********************************************************************/
+/*!*******************************************************!*\
+  !*** D:/MyProjects/LittleBear/APP/KE1Demo/pages.json ***!
+  \*******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8408,9 +8408,9 @@ module.exports = {"_from":"@dcloudio/uni-stat@next","_id":"@dcloudio/uni-stat@2.
 
 /***/ }),
 /* 7 */
-/*!*************************************************************************************!*\
-  !*** D:/U盘备份/APP/EmbeddedSystem-LittleBear/APP/KE1Demo/pages.json?{"type":"style"} ***!
-  \*************************************************************************************/
+/*!************************************************************************!*\
+  !*** D:/MyProjects/LittleBear/APP/KE1Demo/pages.json?{"type":"style"} ***!
+  \************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8419,9 +8419,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 8 */
-/*!************************************************************************************!*\
-  !*** D:/U盘备份/APP/EmbeddedSystem-LittleBear/APP/KE1Demo/pages.json?{"type":"stat"} ***!
-  \************************************************************************************/
+/*!***********************************************************************!*\
+  !*** D:/MyProjects/LittleBear/APP/KE1Demo/pages.json?{"type":"stat"} ***!
+  \***********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8541,9 +8541,9 @@ function normalizeComponent (
 
 /***/ }),
 /* 15 */
-/*!****************************************************************************!*\
-  !*** D:/U盘备份/APP/EmbeddedSystem-LittleBear/APP/KE1Demo/myjs/global_val.js ***!
-  \****************************************************************************/
+/*!***************************************************************!*\
+  !*** D:/MyProjects/LittleBear/APP/KE1Demo/myjs/global_val.js ***!
+  \***************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 

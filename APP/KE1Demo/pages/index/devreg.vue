@@ -32,7 +32,7 @@
 		data() {
 			return {
 				imei:null,
-				devid:'477077ac-04d3-4574-aea5-b7ca98b1415e',
+				devid:'43132880-90cb-45e7-b4f9-f3f0d1670a82',
 				btnAddDisable:true,
 				btnInfoDisable:true
 			}
