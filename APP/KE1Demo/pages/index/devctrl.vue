@@ -13,7 +13,7 @@
 		
 		<view class="line"></view>
 		<view class="uni-padding-wrap uni-common-mt">
-			<button class="button"   @tap="lightUp">亮灯</button>
+			<button class="button"   @tap="lightUp">亮灯30秒</button>
 			<button class="button"   @tap="lightsOff">灭灯</button>
 			<button class="button"  @tap="alarm">蜂鸣</button>
 		</view>
@@ -48,10 +48,82 @@
 			lightUp(){
 				this.lampstatus=1;
 				console.log(this.lampstatus);
+				this.cmdcode = 3;
+				this.cmdstr = 'on';
+				console.log("sendCmd");
+				if(0 != this.maxTime){
+					console.log("sendCmd busy");
+					return;
+				}
+				//{"cmdstring":"{"L1":0,"L2":0}","cmdlen":15,"cmdcode":3}
+				let cmdpara = {
+					cmdstring:this.cmdstr,
+					cmdlen:this.cmdstr.length,
+					cmdcode:this.cmdcode
+				}
+				let cmdstr = JSON.stringify(cmdpara);
+				console.log("cmdstr:"+cmdstr);
+				
+				uni.request({
+					url: this.globalVal.default_url.devCmd,
+					method: 'POST',
+					data: {
+						deviceId:this.devid,
+						cmdInfo:cmdstr
+					},
+					success: res => {
+						uni.showToast({
+							title: '命令下发成功!请检查设备端',
+							icon:"none",
+							duration:3000
+						});
+						this.btnAddDisable = true;
+						this.maxTime = 60;
+						this.countDownFun();
+					},
+					fail: () => {},
+					complete: () => {}
+				});
 			},
 			lightsOff(){
 				this.lampstatus=0;
 				console.log(this.lampstatus);
+				this.cmdcode=0;
+				this.cmdstr = 'off';
+				console.log("sendCmd");
+				if(0 != this.maxTime){
+					console.log("sendCmd busy");
+					return;
+				}
+				//{"cmdstring":"{"L1":0,"L2":0}","cmdlen":15,"cmdcode":3}
+				let cmdpara = {
+					cmdstring:this.cmdstr,
+					cmdlen:this.cmdstr.length,
+					cmdcode:this.cmdcode
+				}
+				let cmdstr = JSON.stringify(cmdpara);
+				console.log("cmdstr:"+cmdstr);
+				
+				uni.request({
+					url: this.globalVal.default_url.devCmd,
+					method: 'POST',
+					data: {
+						deviceId:this.devid,
+						cmdInfo:cmdstr
+					},
+					success: res => {
+						uni.showToast({
+							title: '命令下发成功!请检查设备端',
+							icon:"none",
+							duration:3000
+						});
+						this.btnAddDisable = true;
+						this.maxTime = 60;
+						this.countDownFun();
+					},
+					fail: () => {},
+					complete: () => {}
+				});
 			},
 			alarm(){
 				

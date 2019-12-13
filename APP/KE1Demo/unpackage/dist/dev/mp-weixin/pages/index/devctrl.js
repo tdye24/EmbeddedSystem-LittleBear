@@ -169,36 +169,11 @@ var _default = {
         this.btnAddDisable = true;
       }
     },
-    lightUp: function lightUp() {
+    lightUp: function lightUp() {var _this = this;
       this.lampstatus = 1;
       console.log(this.lampstatus);
-    },
-    lightsOff: function lightsOff() {
-      this.lampstatus = 0;
-      console.log(this.lampstatus);
-    },
-    alarm: function alarm() {
-
-    },
-    cmdCodeInput: function cmdCodeInput(e) {//命令码
-      console.log("cmdCodeInput");
-      this.cmdcode = e.target.value;
-      if (0 < this.cmdcode.length) {
-        this.btnAddDisable = false;
-      } else {
-        this.btnAddDisable = true;
-      }
-    },
-    cmdStrInput: function cmdStrInput(e) {//命令字符
-      console.log("cmdStrInput");
-      this.cmdstr = e.target.value;
-      if (0 < this.cmdstr.length) {
-        this.btnAddDisable = false;
-      } else {
-        this.btnAddDisable = true;
-      }
-    },
-    sendCmd: function sendCmd() {var _this = this;
+      this.cmdcode = 3;
+      this.cmdstr = 'on';
       console.log("sendCmd");
       if (0 != this.maxTime) {
         console.log("sendCmd busy");
@@ -234,20 +209,117 @@ var _default = {
         complete: function complete() {} });
 
     },
-    countDownFun: function countDownFun() {var _this2 = this;
+    lightsOff: function lightsOff() {var _this2 = this;
+      this.lampstatus = 0;
+      console.log(this.lampstatus);
+      this.cmdcode = 0;
+      this.cmdstr = 'off';
+      console.log("sendCmd");
+      if (0 != this.maxTime) {
+        console.log("sendCmd busy");
+        return;
+      }
+      //{"cmdstring":"{"L1":0,"L2":0}","cmdlen":15,"cmdcode":3}
+      var cmdpara = {
+        cmdstring: this.cmdstr,
+        cmdlen: this.cmdstr.length,
+        cmdcode: this.cmdcode };
+
+      var cmdstr = JSON.stringify(cmdpara);
+      console.log("cmdstr:" + cmdstr);
+
+      uni.request({
+        url: this.globalVal.default_url.devCmd,
+        method: 'POST',
+        data: {
+          deviceId: this.devid,
+          cmdInfo: cmdstr },
+
+        success: function success(res) {
+          uni.showToast({
+            title: '命令下发成功!请检查设备端',
+            icon: "none",
+            duration: 3000 });
+
+          _this2.btnAddDisable = true;
+          _this2.maxTime = 60;
+          _this2.countDownFun();
+        },
+        fail: function fail() {},
+        complete: function complete() {} });
+
+    },
+    alarm: function alarm() {
+
+    },
+    cmdCodeInput: function cmdCodeInput(e) {//命令码
+      console.log("cmdCodeInput");
+      this.cmdcode = e.target.value;
+      if (0 < this.cmdcode.length) {
+        this.btnAddDisable = false;
+      } else {
+        this.btnAddDisable = true;
+      }
+    },
+    cmdStrInput: function cmdStrInput(e) {//命令字符
+      console.log("cmdStrInput");
+      this.cmdstr = e.target.value;
+      if (0 < this.cmdstr.length) {
+        this.btnAddDisable = false;
+      } else {
+        this.btnAddDisable = true;
+      }
+    },
+    sendCmd: function sendCmd() {var _this3 = this;
+      console.log("sendCmd");
+      if (0 != this.maxTime) {
+        console.log("sendCmd busy");
+        return;
+      }
+      //{"cmdstring":"{"L1":0,"L2":0}","cmdlen":15,"cmdcode":3}
+      var cmdpara = {
+        cmdstring: this.cmdstr,
+        cmdlen: this.cmdstr.length,
+        cmdcode: this.cmdcode };
+
+      var cmdstr = JSON.stringify(cmdpara);
+      console.log("cmdstr:" + cmdstr);
+
+      uni.request({
+        url: this.globalVal.default_url.devCmd,
+        method: 'POST',
+        data: {
+          deviceId: this.devid,
+          cmdInfo: cmdstr },
+
+        success: function success(res) {
+          uni.showToast({
+            title: '命令下发成功!请检查设备端',
+            icon: "none",
+            duration: 3000 });
+
+          _this3.btnAddDisable = true;
+          _this3.maxTime = 60;
+          _this3.countDownFun();
+        },
+        fail: function fail() {},
+        complete: function complete() {} });
+
+    },
+    countDownFun: function countDownFun() {var _this4 = this;
       console.log("countDown start...");
       this.cntDown = setInterval(function () {
-        if (0 == _this2.maxTime) {
-          _this2.btnInfo = "命令下发";
-          clearInterval(_this2.interval);
-          _this2.interval = null;
-          _this2.btnAddDisable = false;
+        if (0 == _this4.maxTime) {
+          _this4.btnInfo = "命令下发";
+          clearInterval(_this4.interval);
+          _this4.interval = null;
+          _this4.btnAddDisable = false;
           return;
         } else {
-          _this2.maxTime--;
-          _this2.btnInfo = _this2.maxTime + "秒";
+          _this4.maxTime--;
+          _this4.btnInfo = _this4.maxTime + "秒";
         }
-        console.log(_this2.btnInfo);
+        console.log(_this4.btnInfo);
       }, 1000);
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))

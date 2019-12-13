@@ -20,14 +20,14 @@
 		</view>
 		<view class="topbox2">
 			<view>
-				<view>LED灯:</view>
-				<view>{{LED}}</view>
+				<view>温度:</view>
+				<view>{{termperature}}</view>
 			</view>
 		</view>
 		<view class="topbox">
 			<view>
-				<view>信号强度:</view>
-				<view>{{signal}}</view>
+				<view>湿度:</view>
+				<view>{{humidity}}</view>
 			</view>
 		</view>
 		<view class="uni-padding-wrap uni-common-mt">
@@ -76,8 +76,9 @@
 								let val = JSON.parse(this.userinfo);
 								this.termperature = val.T;
 								this.humidity = val.H;
-								
-								console.log("温度: "+val.T+"C"+" 湿度: "+val.H+"%");
+								this.sound = val.V;
+								this.illumination = val.L
+								console.log("温度: "+val.T+"C"+" 湿度: "+val.H+"%"+" 噪音: "+val.V+"%"+" 光强: "+val.L+"%");
 							}
 							
 						}

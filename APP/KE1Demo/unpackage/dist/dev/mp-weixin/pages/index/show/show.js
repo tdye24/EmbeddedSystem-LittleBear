@@ -210,8 +210,9 @@ var _default =
               var val = JSON.parse(_this.userinfo);
               _this.termperature = val.T;
               _this.humidity = val.H;
-
-              console.log("温度: " + val.T + "C" + " 湿度: " + val.H + "%");
+              _this.sound = val.V;
+              _this.illumination = val.L;
+              console.log("温度: " + val.T + "C" + " 湿度: " + val.H + "%" + " 噪音: " + val.V + "%" + " 光强: " + val.L + "%");
             }
 
           }
