@@ -144,11 +144,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 var _default = {
   data: function data() {
     return {
       devid: '43132880-90cb-45e7-b4f9-f3f0d1670a82',
-      cmdcode: 0,
+      cmdcode: 1,
       cmdstr: '',
       cntDown: null,
       maxTime: 0,
@@ -169,10 +174,19 @@ var _default = {
         this.btnAddDisable = true;
       }
     },
+    timeInput: function timeInput(e) {
+      console.log("亮灯时间设置");
+      this.cmdcode = e.target.value;
+      if (this.cmdcode > 9) {
+        this.btnAddDisable = false;
+      } else {
+        thi.btnAddDisable = true;
+      }
+    },
     lightUp: function lightUp() {var _this = this;
       this.lampstatus = 1;
       console.log(this.lampstatus);
-      this.cmdcode = 3;
+
       this.cmdstr = 'on';
       console.log("sendCmd");
       if (0 != this.maxTime) {

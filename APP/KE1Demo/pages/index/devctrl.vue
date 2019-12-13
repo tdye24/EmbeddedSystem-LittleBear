@@ -13,9 +13,14 @@
 		
 		<view class="line"></view>
 		<view class="uni-padding-wrap uni-common-mt">
-			<button class="button"   @tap="lightUp">亮灯30秒</button>
+			<view class="with-fun">
+				亮灯时间 Time (x 10 秒):
+				<view>
+				<input class="uni-input inputText" placeholder="输入 亮灯时间 Time" type="text" :value="cmdcode" maxlength="36" @input="timeInput"/>
+				</view>
+			</view>
+			<button class="button"   @tap="lightUp">亮灯</button>
 			<button class="button"   @tap="lightsOff">灭灯</button>
-			<button class="button"  @tap="alarm">蜂鸣</button>
 		</view>
 	</view>
 </template>
@@ -24,7 +29,7 @@
 		data() {
 			return {
 				devid:'43132880-90cb-45e7-b4f9-f3f0d1670a82',
-				cmdcode:0,
+				cmdcode:1,
 				cmdstr:'',
 				cntDown:null,
 				maxTime:0,
@@ -45,10 +50,19 @@
 					this.btnAddDisable = true;
 				}
 			},
+			timeInput(e){
+				console.log("亮灯时间设置");
+				this.cmdcode = e.target.value;
+				if(this.cmdcode >9){
+					this.btnAddDisable = false;
+				}else{
+					thi.btnAddDisable = true;
+				}
+			},
 			lightUp(){
 				this.lampstatus=1;
 				console.log(this.lampstatus);
-				this.cmdcode = 3;
+				
 				this.cmdstr = 'on';
 				console.log("sendCmd");
 				if(0 != this.maxTime){

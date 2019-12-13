@@ -7501,9 +7501,9 @@ module.exports = g;
 
 /***/ }),
 /* 4 */
-/*!*******************************************************!*\
-  !*** D:/MyProjects/LittleBear/APP/KE1Demo/pages.json ***!
-  \*******************************************************/
+/*!********************************************************************!*\
+  !*** D:/U盘备份/APP/EmbeddedSystem-LittleBear/APP/KE1Demo/pages.json ***!
+  \********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8408,20 +8408,20 @@ module.exports = {"_from":"@dcloudio/uni-stat@next","_id":"@dcloudio/uni-stat@2.
 
 /***/ }),
 /* 7 */
-/*!************************************************************************!*\
-  !*** D:/MyProjects/LittleBear/APP/KE1Demo/pages.json?{"type":"style"} ***!
-  \************************************************************************/
+/*!*************************************************************************************!*\
+  !*** D:/U盘备份/APP/EmbeddedSystem-LittleBear/APP/KE1Demo/pages.json?{"type":"style"} ***!
+  \*************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/index/show/show": { "navigationBarTitleText": "终端数据" }, "pages/index/devreg": { "navigationBarTitleText": "设备注册" }, "pages/index/devctrl": { "navigationBarTitleText": "命令控制模式" }, "pages/index/devinfo": { "navigationBarTitleText": "设备信息" }, "pages/index/devhistory": { "navigationBarTitleText": "设备历史信息" } }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "光感声控灯系统", "navigationBarBackgroundColor": "#F8F8F8", "backgroundColor": "#F8F8F8" } };exports.default = _default;
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/index/show/show": { "navigationBarTitleText": "终端数据", "usingComponents": {} }, "pages/index/devreg": { "navigationBarTitleText": "设备注册", "usingComponents": {} }, "pages/index/devctrl": { "navigationBarTitleText": "命令控制模式", "usingComponents": {} }, "pages/index/devinfo": { "navigationBarTitleText": "设备信息", "usingComponents": {} }, "pages/index/devhistory": { "navigationBarTitleText": "设备历史信息", "usingComponents": {} } }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "光感声控灯系统", "navigationBarBackgroundColor": "#F8F8F8", "backgroundColor": "#F8F8F8" } };exports.default = _default;
 
 /***/ }),
 /* 8 */
-/*!***********************************************************************!*\
-  !*** D:/MyProjects/LittleBear/APP/KE1Demo/pages.json?{"type":"stat"} ***!
-  \***********************************************************************/
+/*!************************************************************************************!*\
+  !*** D:/U盘备份/APP/EmbeddedSystem-LittleBear/APP/KE1Demo/pages.json?{"type":"stat"} ***!
+  \************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8541,9 +8541,9 @@ function normalizeComponent (
 
 /***/ }),
 /* 15 */
-/*!***************************************************************!*\
-  !*** D:/MyProjects/LittleBear/APP/KE1Demo/myjs/global_val.js ***!
-  \***************************************************************/
+/*!****************************************************************************!*\
+  !*** D:/U盘备份/APP/EmbeddedSystem-LittleBear/APP/KE1Demo/myjs/global_val.js ***!
+  \****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
