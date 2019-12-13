@@ -204,14 +204,10 @@ int main(void)
 					}
 					ad1 /=50 ;
 					ad2 /=50 ;
-					if(ad1 > 1500 && ad2 < 150) {
+					if(ad1 > 500 && ad2 < 100) {
 						HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5|GPIO_PIN_6|GPIO_PIN_7, GPIO_PIN_RESET);
 						current_state = 1;
 						HAL_Delay(7000);
-						Beep_Switch(1);
-						HAL_Delay(1000);
-						Beep_Switch(0);
-						HAL_Delay(1000);
 						HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5|GPIO_PIN_6|GPIO_PIN_7, GPIO_PIN_SET);
 						current_state = 0;
 					}
@@ -273,24 +269,27 @@ int main(void)
 				current_cmd = atoi(str); //0ÃðµÆ£¬1¿ªµÆ
 				printf("CURRENT COMMAND : %d\r\n", current_cmd);
 				if(current_state == 0) {
-					if(current_cmd == 1) {
+					if(current_cmd > 0) {
+						uint16_t light_time = current_cmd*10000;
+						printf("light time = %d\r\n", light_time);
 						HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5|GPIO_PIN_6|GPIO_PIN_7, GPIO_PIN_RESET);
 						current_state = 1;
-						Beep_Switch(1);
-						HAL_Delay(1000);
+						HAL_Delay(light_time-1000);
 						Beep_Switch(0);
 						HAL_Delay(1000);
-						HAL_Delay(5000);
+						Beep_Switch(1);
+						HAL_Delay(1000);
+						HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5|GPIO_PIN_6|GPIO_PIN_7, GPIO_PIN_SET);
+						current_state = 0;
 					}
 				} else if(current_state == 1) {
 					if(current_cmd == 0) {
-						HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5|GPIO_PIN_6|GPIO_PIN_7, GPIO_PIN_SET);
 						current_state = 0;
-						Beep_Switch(1);
-						HAL_Delay(1000);
 						Beep_Switch(0);
 						HAL_Delay(1000);
-						HAL_Delay(5000);
+						Beep_Switch(1);
+						HAL_Delay(1000);
+						HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5|GPIO_PIN_6|GPIO_PIN_7, GPIO_PIN_SET);
 					}
 				}
 				
